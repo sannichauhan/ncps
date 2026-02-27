@@ -12,13 +12,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Parents',
+            name='Notice',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('father_name', models.CharField(max_length=100)),
-                ('mother_name', models.CharField(max_length=100)),
-                ('phone', models.CharField(max_length=15)),
-                ('address', models.TextField(default='Not Available', max_length=255)),
+                ('title', models.CharField(max_length=200)),
+                ('description', models.TextField()),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
             ],
         ),
     ]
